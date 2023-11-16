@@ -1,18 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import vertexai
-from vertexai.preview.language_models import ChatModel
+from vertexai.language_models import ChatModel
 import os
-#import google.cloud.logging
 
 app = Flask(__name__)
-PROJECT_ID = os.environ.get('GCP_PROJECT') #Your Google Cloud Project ID
-LOCATION = os.environ.get('GCP_REGION')   #Your Google Cloud Project Region
-
-#client = google.cloud.logging.Client(project=PROJECT_ID)
-#client.setup_logging()
-
-#LOG_NAME = "flask-app-internal-logs"
-#logger = client.logger(LOG_NAME)
+PROJECT_ID = "tt-dev-001"  
+LOCATION = "us-central1"  
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
@@ -43,9 +36,7 @@ def vertex_palm():
         user_input = request.args.get('user_input')
     else:
         user_input = request.form['user_input']
-    #logger.log(f"Starting chat session...")
     chat_model = create_session()
-    #logger.log(f"Chat Session created")
     content = response(chat_model,user_input)
     return jsonify(content=content)
 
