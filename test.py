@@ -1,15 +1,8 @@
 import os
-#import google.cloud.logging
 import vertexai
 
-PROJECT_ID = "tt-dev-001"  # Your Google Cloud Project ID
-LOCATION = "us-central1"  # Your Google Cloud Project Region
-
-#client = google.cloud.logging.Client(project=PROJECT_ID)
-#client.setup_logging()
-
-#LOG_NAME = "non-flask-internal-logs"
-#logger = client.logger(LOG_NAME)
+PROJECT_ID = "YOUR_PROJECT_ID"  
+LOCATION = "us-central1" 
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
