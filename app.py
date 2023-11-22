@@ -4,7 +4,7 @@ from vertexai.language_models import ChatModel
 import os
 
 app = Flask(__name__)
-PROJECT_ID = "<YOUR_PROJECT_ID>"  
+PROJECT_ID = "tt-dev-001"  
 LOCATION = "us-central1"  
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
@@ -26,7 +26,6 @@ def response(chat, message):
 
 @app.route('/')
 def index():
-    ###
     return render_template('index.html')
 
 @app.route('/palm2', methods=['GET', 'POST'])

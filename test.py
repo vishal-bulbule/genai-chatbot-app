@@ -1,7 +1,7 @@
 import os
 import vertexai
 
-PROJECT_ID = "YOUR_PROJECT_ID"  
+PROJECT_ID = "tt-dev-001"  
 LOCATION = "us-central1" 
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
