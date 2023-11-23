@@ -33,4 +33,4 @@ The Vertex AI SDK for Python streamlines data ingestion, model training, and pre
 ## Demo Video
 
 Check out our demo video on YouTube showcasing the application:
-[[Demo Video]](https://youtu.be/Qb4WPgeT_Yc)
+[[Demo Video]](https://youtu.be/5JRuy47WR1M)
